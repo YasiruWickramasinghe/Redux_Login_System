@@ -9,6 +9,9 @@ npm install @reduxjs/toolkit
 npm install redux
 npm install react-redux
 
+#YouTube Link
+https://www.youtube.com/watch?v=mMzhWXr9ass
+
 #################################################################################################
 
 
