@@ -1,7 +1,7 @@
 import "./App.css";
 import Home from "./Pages/Home";
 import Login from "./Pages/Login";
-import Register from "./Pages/Register";
+// import Register from "./Pages/Register";
 import Logout from "./Pages/Logout";
 import {
   BrowserRouter as Router,
@@ -16,7 +16,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        {/* <Route path="/register" element={<Register />} /> */}
         <Route path="/logout" element={<Logout />} />
       </Routes>
     </Router>

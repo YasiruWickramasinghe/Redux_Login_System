@@ -1,6 +1,8 @@
 import { useState } from "react";
 import FormInput from "../Components/FormInput";
 import styled from "styled-components";
+import { useDispatch } from "react-redux";
+import { login } from "../Services/Features/User/userSlice";
 
 const Modal = styled.div`
   position: fixed;
@@ -104,8 +106,17 @@ const Login = (props) => {
     },
   ];
 
+  const dispatch = useDispatch();
+
   const hadleSubmit = (e) => {
     e.preventDefault();
+
+    dispatch(
+      login({
+        values: values,
+        loggedIn: true,
+      })
+    );
   };
 
   const onChange = (e) => {

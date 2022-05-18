@@ -2,6 +2,15 @@
 npm install
 npm start
 
+#install redux
+1)go to redux website
+
+npm install @reduxjs/toolkit
+npm install redux
+npm install react-redux
+
+#################################################################################################
+
 
 # Getting Started with Create React App
 
