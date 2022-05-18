@@ -9,12 +9,16 @@ import {
   Route,
   // Navigate,
 } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { selectUser } from "./Services/Features/User/userSlice";
 
 function App() {
+  const user = useSelector(selectUser);
+
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route exact path="/" element={user ? <Logout /> : <Home />} />
         <Route path="/login" element={<Login />} />
         {/* <Route path="/register" element={<Register />} /> */}
         <Route path="/logout" element={<Logout />} />

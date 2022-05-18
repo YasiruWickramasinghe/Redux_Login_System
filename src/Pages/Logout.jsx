@@ -1,6 +1,7 @@
 import React from "react";
-
+import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
+import { logout, selectUser } from "../Services/Features/User/userSlice";
 
 const Container = styled.div`
   display: flex;
@@ -35,13 +36,23 @@ const Button = styled.button`
 `;
 
 const Logout = () => {
+  const user = useSelector(selectUser);
+
+  const dispatch = useDispatch();
+
+  const hadleLogout = (e) => {
+    e.preventDefault();
+
+    dispatch(logout());
+  };
+
   return (
     <div>
       <Container>
         <Title>
-          Welcome <Span>Yasiru Wickramasinghe</Span>
+          Welcome <Span>{user.values.username}</Span>
         </Title>
-        <Button>LOGOUT</Button>
+        <Button onClick={(e) => hadleLogout(e)}>LOGOUT</Button>
       </Container>
     </div>
   );
