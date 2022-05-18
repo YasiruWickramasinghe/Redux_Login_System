@@ -133,7 +133,7 @@ const Login = (props) => {
               onChange={onChange}
             />
           ))}
-          <Button>Login</Button>
+          <Button type="submit">Login</Button>
           <Paragraph>
             Dont't have an account?{" "}
             <Span onClick={props.onShowRegCloseLog}>Sign Up</Span>
